@@ -1,0 +1,18 @@
+﻿<Window x:Class="Homework17version1._1.WindowAddOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Homework17version1._1"
+        mc:Ignorable="d"
+        Title="Заказ" Height="329" Width="692">
+    <Grid Margin="0,0,10,0">
+        <Label Content="Товар" HorizontalAlignment="Left" Margin="30,47,0,0" VerticalAlignment="Top" Width="142" Height="40" FontSize="20"/>
+        <Label Content="Количество" HorizontalAlignment="Left" Margin="30,128,0,0" VerticalAlignment="Top" Width="118" FontSize="20"/>
+        <ComboBox x:Name="product" HorizontalAlignment="Left" Margin="237,47,0,0" VerticalAlignment="Top" Width="427" Height="40" FontSize="20"/>
+        <TextBox x:Name="quantity" HorizontalAlignment="Left" Margin="237,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Height="29" FontSize="20"/>
+        <Button x:Name="AddOrder" Content="Создать" HorizontalAlignment="Left" Margin="101,248,0,0" VerticalAlignment="Top" Height="41" Width="90" FontSize="20" Click="AddOrder_Click"/>
+        <Button x:Name="CancelOrder" Content="Отмена" HorizontalAlignment="Left" Margin="411,248,0,0" VerticalAlignment="Top" Height="40" Width="103" FontSize="20" Click="CancelOrder_Click"/>
+        <Label Content="шт" HorizontalAlignment="Left" Margin="414,137,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

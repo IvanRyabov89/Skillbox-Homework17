@@ -1,0 +1,25 @@
+﻿<Page x:Class="Homework17version1._1.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Homework17version1._1"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="600"
+      Title="Login">
+
+    <Grid>
+        <Image HorizontalAlignment="Center" Height="700" VerticalAlignment="Center" Width="900" Source="https://chem-otlichayetsya.com/wp-content/uploads/lokalnaya-avtorizaciya-bez-parolya-v-ubuntu-1536x803.jpeg" Stretch="Fill"/>
+        <TextBox x:Name="TBLogin" HorizontalAlignment="Center" Margin="155,112,0,0" TextWrapping="Wrap"
+                 VerticalAlignment="Top" Width="159" Height="30" FontSize="18"/>
+        <TextBox x:Name="TBPassword" HorizontalAlignment="Center" Margin="155,187,0,0" TextWrapping="Wrap"
+                 VerticalAlignment="Top" Width="159" Height="30" FontSize="18"/>
+        <Button x:Name="BtnAuthorize" Content="Авторизация" HorizontalAlignment="Center" 
+                Margin="155,260,0,0" VerticalAlignment="Top" Height="34" Width="159" FontSize="18" 
+                FontFamily="Showcard Gothic" Click="BtnAuthorize_Click"/>
+        <TextBlock HorizontalAlignment="Center" Margin="155,83,0,0" TextWrapping="Wrap" Text="Login"
+                   VerticalAlignment="Top" Foreground="White" FontSize="18" FontFamily="Castellar"/>
+        <TextBlock HorizontalAlignment="Center" Margin="155,160,0,0" TextWrapping="Wrap" Text="Password"
+                   VerticalAlignment="Top" Foreground="White" FontSize="18" FontFamily="Castellar"/>
+    </Grid>
+</Page>
