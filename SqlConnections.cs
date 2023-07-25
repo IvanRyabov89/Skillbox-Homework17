@@ -81,9 +81,13 @@ namespace Homework17version1._1
         /// <param name="item"></param>
         public void Remove(ModelAccess item)
         {
-            ProductContext.ModelAccessNew.Remove(item);
-            ProductContext.SaveChanges();
-            SelectProducts();
+            try
+            {
+                ProductContext.ModelAccessNew.Remove(item);
+                ProductContext.SaveChanges();
+                SelectProducts();
+            }
+            catch { }
         }
         #endregion
 
@@ -112,8 +116,15 @@ namespace Homework17version1._1
         /// <param name="item"></param>
         public void CreateOrUpdate(ModelAccess item)
         {
-            ProductContext.ModelAccessNew.AddOrUpdate(item);
-            ProductContext.SaveChanges();
+            try
+            {
+                ProductContext.ModelAccessNew.AddOrUpdate(item);
+                ProductContext.SaveChanges();
+            }
+            catch
+            {
+
+            }
         }
         #endregion
     }

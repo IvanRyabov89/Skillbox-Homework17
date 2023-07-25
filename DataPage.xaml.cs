@@ -206,6 +206,7 @@ namespace Homework17version1._1
             for (int i = 0; i < sql.ListProducts.Count; i++)
             {
                 if (list[i].ModelAccessID == item.ModelAccessID) item.ModelAccessID++;
+
                 else break;
             }
         }
@@ -215,21 +216,20 @@ namespace Homework17version1._1
         /// <param name="item"></param>
         private void SetID(Order item)
         {
-           
             item.OrderID = 1;
             List<Order> list = (sql.ListInitialOrders.OrderBy(i => i.OrderID)).ToList();
             for (int i = 0; i < sql.ListInitialOrders.Count; i++)
             {
-                
                 if (list[i].OrderID == item.OrderID)
                 {
-                    MessageBox.Show($"{item.OrderID}");
+                    //MessageBox.Show($"{item.OrderID}");
                     item.OrderID++;
-                    MessageBox.Show($"{item.OrderID}");
+                    //MessageBox.Show($"{item.OrderID}");
                 }
                 else break;
             }
         }
+
         private void AddClients_Click(object sender, RoutedEventArgs e)
         {
             CurrentUser = new ModelSQL();
@@ -263,11 +263,12 @@ namespace Homework17version1._1
             wnd.ShowDialog();
             //if (CurrentOrder.ProductId == 0) return;
 
-            SetID(CurrentOrder);
+           
             CurrentOrder.LastName = CurrentUser.LastName;
             CurrentOrder.Name = CurrentUser.Name;
             CurrentOrder.MiddleName = CurrentUser.MiddleName;
             CurrentOrder.Email= CurrentUser.Email;
+            SetID(CurrentOrder);
             sql.CreateOrUpdate(CurrentOrder);
             SelectOrders();
         }

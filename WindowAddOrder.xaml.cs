@@ -49,15 +49,8 @@ namespace Homework17version1._1
             if (product.SelectedValue != null)
             {
                 ModelAccess products = (ModelAccess)product.SelectedItem;
-                //Data.ProductId = products.ModelAccessID;
                 Data.ProductCount = quantity.Text;
                 Data.NameProduct = product.Text;
-
-                //Order model = new Order($"{elements[0]}", $"{tbFirst.Text}", $"{tbPatronymic.Text}", $"{tbPhone.Text}", $"{tbEmail.Text}");
-
-                //sql.CreateOrUpdate(model);
-                //DataPage data = new DataPage();
-                //data.SelectOrders();
             }
             Close();
         }
