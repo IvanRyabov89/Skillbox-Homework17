@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace Homework17version1._1
 {
     public class Order
     {
+        
         public Order( string LastName, string Name, string MiddleName, string Email, string NameProduct, string ProductCount)
         {
             //this.userid = UserId;
@@ -21,6 +23,7 @@ namespace Homework17version1._1
             this.productCount = ProductCount;
         }
         public Order() { }
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int OrderID { get; set; }
         private string lastName;
         private string name;
